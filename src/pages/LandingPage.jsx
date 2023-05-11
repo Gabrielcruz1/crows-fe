@@ -5,9 +5,14 @@ import "../styles/LandingPage.css"
 const LandingPage = () => {
   return (
     <>
-      <div className="landingPage">Lorem Ipsum text Lorem Ipsum Text on screen will appear in awesome font with animation </div>
-      <Link to="/home"><button className="enterButton"> Enter </button > 
-      </Link> 
+      <div>
+        <p className='landingPageText'>Lorem Ipsum text Lorem Ipsum Text on screen will appear in awesome font with animation </p>
+        <div className="enterButton">
+          <Link to="/home" >
+            <button > Enter </button >
+          </Link>
+        </div>
+      </div>
     </>
   )
 }
