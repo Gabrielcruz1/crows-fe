@@ -1,4 +1,12 @@
-.navigationBar{
+.logo{
+    padding: 20px;
+}
+.navigationLinks{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    margin-top: -110px;
+    padding: 30px;
+}
+.individualLink{
+    padding: 0px 5px 0px 5px;
 }

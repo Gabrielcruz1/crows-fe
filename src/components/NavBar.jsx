@@ -6,10 +6,18 @@ const NavBar = () => {
   return (
     <>
       <div className="navigationBar">
-        <h1>LOGO</h1>
-        <Link>
-          <p>Login/Sign-up</p>
-        </Link>
+        <h1 className='logo'>LOGO</h1>
+        <div className='navigationLinks'>
+          <Link className='individualLink'>
+            <p>Clothing</p>
+          </Link>
+          <Link className='individualLink'>
+            <p>Cart</p>
+          </Link>
+          <Link className='individualLink'>
+            <p>Login/Sign-up</p>
+          </Link>
+        </div>
       </div>
     </>
   )
