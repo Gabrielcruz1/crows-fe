@@ -13,7 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage />} />
         <Route path='/home' element={<Home/> } />
-        {/* <Route path='/' element={ } /> */}
+        {/* <Route path='/login' element={<Login />} /> */}
+        {/* <Route path='/' element={ } />
+        <Route path='/' element={ } /> */}
       </Routes>
     </div>
   );
