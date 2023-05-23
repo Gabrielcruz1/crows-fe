@@ -23,4 +23,11 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+}
+.test{
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
 }
