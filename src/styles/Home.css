@@ -6,8 +6,14 @@
     padding: 3px;
 }
 .searchBar{
-    
     text-align: center;
+}
+.heroImage{
+    box-sizing: border-box;
+    width: 100%;
+    z-index: 0;
+    height: 275px;
+    margin-top: 10px;
 }
 .mappedImage{
     height: 200px;
