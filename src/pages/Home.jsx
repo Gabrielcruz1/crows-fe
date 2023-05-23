@@ -17,11 +17,17 @@ const Home = () => {
 
   return (
     <div className="Home">
-      products.ma
       <p>"Quote Brand Statement, Something Lorem Ipsum Lorem Ipsum Some random Wording"</p>
       <p>Search Bar Here</p>
-      <h1>(Hero/ Image/ Clothing Content/)</h1>
-      <h1>(Hero/ Image/ Clothing Content/)</h1>
+      <h1>{products.map((product, index) =>{
+        return (
+          <div key={product.id}>
+            <p>{product.title}</p>
+
+          </div>
+        )})}</h1>
+      <h1>Hero/ Image/ Clothing Content</h1>
+      
     </div>
   )
 }
