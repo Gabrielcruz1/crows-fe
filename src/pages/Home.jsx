@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="Home">
-      <p>"Quote Brand Statement, Something Lorem Ipsum Lorem Ipsum Some random Wording"</p>
+      <h3 className='brandStatement'>"Quote Brand Statement, Something Lorem Ipsum Lorem Ipsum Some random Wording"</h3>
       <p>Search Bar Here</p>
       {products.map((product, index) =>{
         return (
