@@ -19,13 +19,13 @@ const Home = () => {
     <div className="Home">
       <p>"Quote Brand Statement, Something Lorem Ipsum Lorem Ipsum Some random Wording"</p>
       <p>Search Bar Here</p>
-      <h1>{products.map((product, index) =>{
+      {products.map((product, index) =>{
         return (
           <div key={product.id}>
-            <p>{product.title}</p>
-
+            <h3>{product.title}</h3>
+            <img className="mappedImage" src={product.image} alt={product.title}/>
           </div>
-        )})}</h1>
+        )})}
       <h1>Hero/ Image/ Clothing Content</h1>
       
     </div>
