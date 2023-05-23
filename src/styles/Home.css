@@ -19,3 +19,8 @@
     height: 200px;
     width: 200px;
 }
+.productsLayout{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
