@@ -26,9 +26,10 @@ const Home = () => {
           placeholder="Search Product Here"
         />
       </div>
-      {products.filter(() => { })}
+      {/* {products.filter(() => { })} */}
       {/* HERO IMAGE */}
       <img className='heroImage' src='https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/0f1ad52b9c71f9437f7492c8b5e1d0de.jpg' />
+      <h3 className='productsHeading'>Products</h3>
       <div className='productsLayout'>
         {products.map((product, index) => {
             return (

@@ -15,6 +15,9 @@
     height: 275px;
     margin-top: 10px;
 }
+.productsHeading{
+    text-align: center;
+}
 .mappedImage{
     height: 200px;
     width: 200px;

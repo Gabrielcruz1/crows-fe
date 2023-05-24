@@ -6,7 +6,10 @@ const LandingPage = () => {
   return (
     <>
       <div>
-        <p className='landingPageText'>Lorem Ipsum text Lorem Ipsum Text on screen will appear in awesome font with animation </p>
+        <div className='textContainer'>
+          <p className='landingPageText'>Lorem Ipsum text Lorem Ipsum Text on screen will appear in awesome font with animation </p>
+        </div>
+
         <div className="enterButton">
           <Link to="/home" >
             <button > Enter </button >
