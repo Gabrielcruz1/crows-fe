@@ -4,6 +4,7 @@
     border: solid black 1px;
     border-radius: 5px;
     padding: 3px;
+    margin-top: 5px;
 }
 .searchBar{
     text-align: center;
@@ -12,7 +13,7 @@
     box-sizing: border-box;
     width: 100%;
     z-index: 0;
-    height: 275px;
+    height: 350px;
     margin-top: 10px;
 }
 .productsHeading{
