@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 
 const SearchBar = ({keyword, onChange}) => {
     const [products, setProducts] = useState([]);
-    const [filteredResults, setFilteredResults] = useState([])
     const [searchBarInput, setSearchBarInput] = useState('');
 
     const BASE_URL = "https://fakestoreapi.com/products"
@@ -11,7 +10,7 @@ const SearchBar = ({keyword, onChange}) => {
     const getProductData = async () => {
         try {
             const response = await fetch(BASE_URL);
-            console.log(response);
+            // console.log(response);
             const allProducts = await response.json();
             setProducts(allProducts);
         } catch (error) {
@@ -29,9 +28,11 @@ const SearchBar = ({keyword, onChange}) => {
                 return Object.values(item).join('').toLowerCase().includes(searchBarInput.toLowerCase())
             });
             console.log(filteredData)
-            setFilteredResults(filteredData)
+            setProducts(filteredData)
+        } else if(searchBarInput === null ){
+            setSearchBarInput(searchBarInput)
         } else {
-            setFilteredResults(products)
+            setProducts(products)
         }
 
     }
@@ -51,17 +52,17 @@ const SearchBar = ({keyword, onChange}) => {
                 />
             </div>
             {
-                searchBarInput.length > 1 ? (
-                    filteredResults.map((item) => {
+                searchBarInput.length >= 1 ? (
+                    products.map((product) => {
                         return (
-                            <div>
-                                <p> {item.title}</p>
+                            <div key={product.id}>
+                                <p> {product.title}</p>
                             </div>
                         )
                     })
                 ) : (products.map((product) => {
                     return (
-                        <div>
+                        <div key={product.id}>
                             <p>{product.title}</p>
                         </div>
                     )
