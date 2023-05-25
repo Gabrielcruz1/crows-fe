@@ -11,13 +11,15 @@ const Home = () => {
   const getProductData = async () =>{
     try{  
       const response = await fetch(BASE_URL);
-      console.log(response);
+      // console.log(response);
       const allProducts = await response.json();
       setProducts(allProducts);
     }catch(error){
       console.log(error)
     }
   } 
+
+  
 
 
   useEffect(() => {

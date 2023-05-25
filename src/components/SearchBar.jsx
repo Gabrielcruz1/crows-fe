@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
 
-const SearchBar = () => {
-    const [searchBarInput, setSearchBarInput] = useState('');
+const SearchBar = ({keyword, onChange}) => {
     const [products, setProducts] = useState([]);
     const [filteredResults, setFilteredResults] = useState([])
+    const [searchBarInput, setSearchBarInput] = useState('');
 
     const BASE_URL = "https://fakestoreapi.com/products"
 
@@ -21,6 +21,7 @@ const SearchBar = () => {
 
 
     const searchItems = (searchValue) => {
+        getProductData();
         setSearchBarInput(searchValue);
         console.log(searchValue);
         if (searchBarInput !== '') {
@@ -35,30 +36,37 @@ const SearchBar = () => {
 
     }
 
+    useEffect(() => {
+    }, [])
+
 
     return (
-        <div className='searchBar'>
-            <input
-                type="text"
-                placeholder="Search Product Here"
-                onChange={(e) => searchItems(e.target.value)}
-            />
-            {/* {searchBarInput.length > 1 ? (
-                filteredResults.map((item) => {
-                    return (
-                        <div>
-                            <p> {item.title}</p>
-                        </div>
-                    )
-                })
-            ) : (products.map((product) => {
+        <div>
+            <div className='searchBar'>
+                <input
+                    type="text"
+                    placeholder="Search Product Here"
+                    value={keyword}
+                    onChange={(e) => searchItems(e.target.value)}
+                />
+            </div>
+            {
+                searchBarInput.length > 1 ? (
+                    filteredResults.map((item) => {
+                        return (
+                            <div>
+                                <p> {item.title}</p>
+                            </div>
+                        )
+                    })
+                ) : (products.map((product) => {
                     return (
                         <div>
                             <p>{product.title}</p>
                         </div>
                     )
-                }) */}
-            </div>
+                }))}
+        </div >
     )
 }
 
