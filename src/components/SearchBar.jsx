@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import '../styles/SearchBar.css'
 
 const SearchBar = ({keyword, onChange}) => {
     const [products, setProducts] = useState([]);
@@ -56,7 +57,7 @@ const SearchBar = ({keyword, onChange}) => {
                     products.map((product) => {
                         return (
                             <div key={product.id}>
-                                <p> {product.title}</p>
+                                <p className='test'> {product.title}</p>
                             </div>
                         )
                     })
