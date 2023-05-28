@@ -1,25 +1,26 @@
 import React from 'react'
-import "../styles/Home.css"
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
+import "../styles/Home.css"
 
 const Home = () => {
   const [products, setProducts] = useState([])
 
   const BASE_URL = "https://fakestoreapi.com/products"
 
-  const getProductData = async () =>{
-    try{  
+  const getProductData = async () => {
+    try {
       const response = await fetch(BASE_URL);
       // console.log(response);
       const allProducts = await response.json();
       setProducts(allProducts);
-    }catch(error){
+    } catch (error) {
       console.log(error)
     }
-  } 
+  }
 
-  
+
 
 
   useEffect(() => {
@@ -43,14 +44,16 @@ const Home = () => {
       <h3 className='productsHeading'>Products</h3>
       <div className='productsLayout'>
         {products.map((product, index) => {
-            return (
+          return (
+            <Link>
               <div key={product.id} className="productBox">
                 {/* {product.category === "men's clothing" ? product.title : null } */}
-                <p>{ product.title}</p>
-               <img className="mappedImage" src={product.image} alt={product.title} />
+                <p>{product.title}</p>
+                <img className="mappedImage" src={product.image} alt={product.title} />
               </div>
-            )
-          })
+            </Link>
+          )
+        })
         }
       </div>
     </div>

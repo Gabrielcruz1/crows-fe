@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import '../styles/SearchBar.css'
 
-const SearchBar = ({keyword, onChange}) => {
+const SearchBar = ({ keyword, onChange }) => {
     const [products, setProducts] = useState([]);
     const [searchBarInput, setSearchBarInput] = useState('');
 
@@ -30,7 +31,7 @@ const SearchBar = ({keyword, onChange}) => {
             });
             console.log(filteredData)
             setProducts(filteredData)
-        } else if(searchBarInput === null ){
+        } else if (searchBarInput === null) {
             setSearchBarInput(searchBarInput)
         } else {
             setProducts(products)
@@ -56,14 +57,16 @@ const SearchBar = ({keyword, onChange}) => {
                 searchBarInput.length >= 1 ? (
                     products.map((product) => {
                         return (
-                            <div key={product.id}>
-                                <p className='test'> {product.title}</p>
-                            </div>
+                            <Link>
+                                <div key={product.id} >
+                                    <p className='listRenderedFromSearchBar'> {product.title}</p>
+                                </div>
+                            </Link>
                         )
                     })
-                ) : 
-                null
-                }
+                ) :
+                    null
+            }
         </div >
     )
 }
