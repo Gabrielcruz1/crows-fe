@@ -45,8 +45,8 @@ const Home = () => {
       <div className='productsLayout'>
         {products.map((product, index) => {
           return (
-            <Link>
-              <div key={product.id} className="productBox">
+            <Link key={product.id}>
+              <div  className="productBox">
                 {/* {product.category === "men's clothing" ? product.title : null } */}
                 <p>{product.title}</p>
                 <img className="mappedImage" src={product.image} alt={product.title} />

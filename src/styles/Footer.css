@@ -1,7 +1,8 @@
 .footerContainer {
     text-align: center;
-    margin: 250px -55px -1000px -55px;
-    padding: 80px;
+    /* margin: 250px -55px -1000px -55px;
+    padding: 80px; */
+    padding: 1rem;
     background-color: gray;
 
 }
