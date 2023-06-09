@@ -10,7 +10,7 @@ const Main = () => {
             <Routes>
                 <Route path='/' element={<LandingPage />} />
                 <Route path='/home' element={<Home />} />
-                <Route path='/products' element={<ShowPage />} />
+                <Route path='/products/:id' element={<ShowPage />} />
                 {/* <Route path='/login' element={<Login />} /> */}
                 {/* <Route path='/' element={ } />
     <Route path='/' element={ } /> */}
