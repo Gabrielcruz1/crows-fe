@@ -21,8 +21,6 @@ const Home = () => {
   }
 
 
-
-
   useEffect(() => {
     getProductData()
   }, []);
@@ -45,7 +43,7 @@ const Home = () => {
       <div className='productsLayout'>
         {products.map((product, index) => {
           return (
-            <Link key={product.id}>
+            <Link to={`/products/${product.id}`} key={product.id}>
               <div  className="productBox">
                 {/* {product.category === "men's clothing" ? product.title : null } */}
                 <p>{product.title}</p>
