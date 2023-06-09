@@ -20,14 +20,9 @@ const Home = () => {
     }
   }
 
-
   useEffect(() => {
     getProductData()
   }, []);
-
-  // function categorize(productName){
-  //   return productName === "men's clothing"
-  // }
 
   const loaded = () => {
     return (
@@ -74,7 +69,6 @@ const Home = () => {
       </section>
     )
   };
-
 
   return (
     <div>

@@ -57,7 +57,7 @@ const SearchBar = ({ keyword, onChange }) => {
                 searchBarInput.length >= 1 ? (
                     products.map((product) => {
                         return (
-                            <Link key={product.id}>
+                            <Link to={`/products/${product.id}`} key={product.id}>
                                 <div >
                                     <p className='listRenderedFromSearchBar'> {product.title}</p>
                                 </div>
