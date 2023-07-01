@@ -8,4 +8,4 @@ const ClothingPage = () => {
     )
 }
 
-export default CLothingPage;
+export default ClothingPage;
