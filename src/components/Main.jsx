@@ -13,7 +13,7 @@ const Main = () => {
                 <Route path='/products/:id' element={<ShowPage />} />
                 {/* <Route path='/login' element={<Login />} /> */}
                 {/* <Route path='/' element={ } />
-    <Route path='/' element={ } /> */}
+                <Route path='/' element={ } /> */}
             </Routes>
         </div>
     )

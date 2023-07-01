@@ -4,7 +4,7 @@ import "../styles/Footer.css"
 const Footer = () => {
     return (
         <div className='footerContainer'>
-            Footer
+            <p>All Rights Reserved</p>
         </div>
     )
 }
