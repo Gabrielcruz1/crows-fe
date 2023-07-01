@@ -1,11 +1,11 @@
 import React from "react";
 
-const Cart = () => {
-    retrun (
+const CartPage = () => {
+    return (
         <div>
             <h1>CART PAGE</h1>
         </div>
     )
 }
 
-export default Cart
+export default CartPage

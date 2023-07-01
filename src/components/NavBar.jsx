@@ -11,7 +11,7 @@ const NavBar = () => {
           <Link className='individualLink'>
             <p>Clothing</p>
           </Link>
-          <Link className='individualLink'>
+          <Link to={'/cart'} className='individualLink'>
             <p>Cart</p>
           </Link>
           <Link className='individualLink'>
