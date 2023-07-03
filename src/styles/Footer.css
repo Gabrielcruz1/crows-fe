@@ -1,9 +1,8 @@
 .footerContainer {
-    /* text-align: center; */
-    /* margin: 250px -55px -1000px -55px;
-    padding: 80px; */
-    /* padding: 1rem; */
+    margin: 20px 0 0 0;
     background-color: gray;
-    flex-grow: 0;
-    flex-shrink: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
 }

@@ -12,3 +12,6 @@ body {
     height: 100%;
     
   }
+.App{
+    display: grid;
+}
