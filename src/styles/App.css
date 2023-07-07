@@ -5,13 +5,8 @@ a{
 a:hover{
     text-decoration: underline;
 }
-body {
+.App{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    
-  }
-.App{
-    display: grid;
 }

@@ -27,6 +27,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    padding: 20px;
 }
 .productBox{
     border: solid black 1px;
